@@ -1,0 +1,1 @@
+<input type="checkbox" name="item[]" class="checkbox_item" value="{{$id}}">

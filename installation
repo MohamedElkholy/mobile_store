@@ -1,0 +1,12 @@
+installation
+
+
+1- run command : php artisan migrate
+2- run command : php artisan db:seed
+3- go to oppo/public/admincp
+4- use these info to login as an admin
+	user : admin
+	pass : 123456
+
+5- delete storage folder from public direcory
+6- run command : php artisan storage:link
