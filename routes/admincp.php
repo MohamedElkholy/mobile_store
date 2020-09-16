@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix'=>'admincp','namespace'=>'Admincp'], function () {
+Route::group(['prefix'=>'admincp','namespace'=>'admincp'], function () {
     Config::set('auth.define', 'admin');
     Route::get('login','AdminAuth@login');
     Route::post('login','AdminAuth@dologin');
