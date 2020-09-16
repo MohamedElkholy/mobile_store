@@ -30,31 +30,27 @@ Website: http://thevectorlab.net/
     <style type="text/css">
     @font-face {
     font-family: "cairo bold";
-    src: url({{url('admin/font/cairo-bold.ttf')}});
+    src: url("{{asset('admin/font/Cairo-Bold.ttf')}}");
     }
     @font-face {
     font-family: "cairo regular";
-    src: url({{url('admin/font/cairo-regular.ttf')}});
+    src: url("{{asset('admin/font/Cairo-Regular.ttf')}}");
     }
     @font-face {
     font-family: "cairo light";
-    src: url({{url('admin/font/cairo-light.ttf')}});
+    src: url("{{asset('admin/font/Cairo-Light.ttf')}}");
     }
     @font-face {
     font-family: "cairo extraLight";
-    src: url({{url('admin/font/cairo-extraLight.ttf')}});
+    src: url"({{asset('admin/font/Cairo-ExtraLight.ttf')}}");
     }
     @font-face {
     font-family: "cairo black";
-    src: url({{url('admin/font/cairo-black.ttf')}});
+    src: url"({{asset('admin/font/Cairo-Black.ttf')}}");
     }
     @font-face {
     font-family: "cairo simiBold";
-    src: url({{url('admin/font/cairo-simiBold.ttf')}});
-    }
-    @font-face {
-    font-family: "cairo regular";
-    src: url({{url('admin/font/cairo-regular.ttf')}});
+    src: url("{{asset('admin/font/Cairo-SimiBold.ttf')}}");
     }
     
     th,td{

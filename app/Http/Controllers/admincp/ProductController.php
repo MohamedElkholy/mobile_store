@@ -189,4 +189,11 @@ class ProductController extends Controller
         session()->flash('deleted',trans('admincp.deleted'));
         return redirect(aurl('product')); 
     }
+
+    public function search(Request $request){
+        $txt = $request->search_text;
+        $products = Product::Where('name','like','%'.$txt.'%')->orderBy('id','desc')->paginate(50);
+        $title = trans('admincp.products');
+        return view('admincp.products.search_result',compact('products','title'));
+    }
 }

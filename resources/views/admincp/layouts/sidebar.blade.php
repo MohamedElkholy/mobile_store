@@ -5,8 +5,8 @@
     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
     <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
     <div class="navbar-inverse">
-        <form class="navbar-search visible-phone">
-            <input type="text" class="search-query" placeholder="Search" />
+        <form class="navbar-search visible-phone" action="{{route('searchforproduct')}}" method="get">
+            <input name="search_text" type="text" class="search-query" placeholder="@lang('admincp.search_products')" />
         </form>
     </div>
     <!-- END RESPONSIVE QUICK SEARCH FORM -->
@@ -74,7 +74,7 @@
                 <span class="arrow"></span>
             </a>
             <ul class="sub">
-                <li class=""><a class="" href="#">@lang('admincp.reports')</a></li>
+                <li class=""><a class="" href="{{aurl('report')}}">@lang('admincp.reports')</a></li>
                 <li class=""><a class="" href="#">@lang('admincp.statistics')</a></li>
             </ul>
         </li>

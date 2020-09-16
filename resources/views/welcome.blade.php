@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{settings()->store_name}}</title>
+        <title>{{$title}}</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
@@ -70,7 +70,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md cairo">
-                    {{settings()->store_name}}
+                    {{$store_name}}
                 </div>
             </div>
         </div>

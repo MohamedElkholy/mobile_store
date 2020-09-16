@@ -21,9 +21,9 @@
                         </li>
                         <li><a href="#">{{$title}}</a><span class="divider-last">&nbsp;</span></li>
                         <li class="pull-right search-wrap">
-                            <form class="hidden-phone">
+                            <form class="hidden-phone" method="get" action="{{route('searchforproduct')}}">
                                 <div class="search-input-area">
-                                    <input id=" " class="search-query" type="text" placeholder="@lang('admincp.search')">
+                                    <input name="search_text" class="search-query" type="text" placeholder="@lang('admincp.search_products')">
                                     <i class="icon-search"></i>
                                 </div>
                             </form>

@@ -2,6 +2,8 @@
     return [
     
     'admincp'                              => 'لوحة التحكم',
+    'search_products'                              => 'بحث عن منتج',
+    'no_products_found'                              => 'لا يوجد منتجات بهذا الاسم',
     'incorrect_login_information'          => 'برجاء إعادة إدخال البريد الالكتروني وكلمة المرور بشكل صحيح',
     'home'                                 => 'الرئيسية',
     'settings'                             => 'الإعدادات',
@@ -306,4 +308,8 @@
     'add_service'                          =>'اضافة خدمة',
     'product_name_or_servie_type'          =>' اسم المنتج / نوع الخدمة ',
     'retrieve_operations'          =>'عمليات الاسترجاع ',
+    'open_appache'          =>'تأكد من تشغيل برنامج  ',
+
+    'cur'                       =>'ج.م',
+    'store_capital'                     =>'رأس المال',
     ];

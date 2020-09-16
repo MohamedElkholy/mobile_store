@@ -25,11 +25,11 @@ Route::group(['prefix'=>'admincp','namespace'=>'Admincp'], function () {
 
         Route::resource('product','ProductController');
         Route::get('product/show/table','ProductController@show_in_table');
+        Route::get('searchfor','ProductController@search')->name('searchforproduct');
         // Route::get('product/add/note','ProductController@show_in_table');
         
         Route::get('search','SaleController@search')->name('search');
         Route::get('select','SaleController@select')->name('select');
-
         Route::get('operation/sale','SaleController@sale');
         Route::get('operation/retrieve','OperationController@retrieve');
         Route::get('operation/do_retrieve/{id}','OperationController@do_retrieve');
@@ -44,6 +44,8 @@ Route::group(['prefix'=>'admincp','namespace'=>'Admincp'], function () {
             return view('admincp.home',['title'=>trans('admincp.adminPanel')]);
         });
         Route::any('logout','AdminAuth@logout');
+
+        Route::get('report','ReportController@index');
     });
  
 });
