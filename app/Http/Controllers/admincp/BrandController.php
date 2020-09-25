@@ -53,7 +53,7 @@ class BrandController extends Controller
             'image'=>trans('admincp.image'),
         ]);
         if(request()->hasFile('image')){
-            $data['image'] = request()->file('image')->store('public/brands');
+            $data['image'] = request()->file('image')->store('brands');
         }
         Brand::create($data);
         session()->flash('added',trans('admincp.record_added'));
@@ -109,7 +109,7 @@ class BrandController extends Controller
             'image'=>trans('admincp.image'),
         ]);
         if(request()->hasFile('image')){
-            $data['image'] = request()->file('image')->store('public/brands');
+            $data['image'] = request()->file('image')->store('brands');
         }
         Brand::where('id', $id)->update($data);
         session()->flash('updated',trans('admincp.record_updated'));

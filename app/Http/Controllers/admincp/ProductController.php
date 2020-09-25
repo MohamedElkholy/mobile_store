@@ -53,7 +53,7 @@ class ProductController extends Controller
             'discount'=>'numeric|nullable',
             'brand_id'=>'required|numeric',
             'category_id'=>'required|numeric',
-            'image'=>'nullable|'.v_image().'|dimensions:ratio=1/1',
+            'image'=>'nullable|'.v_image(),
             ],[],[
                 'name'=>trans('admincp.name'),
                 'sale_price'=>trans('admincp.sale_price'),
@@ -67,7 +67,7 @@ class ProductController extends Controller
                 'category_id'=>trans('admincp.category'),
             ]);
         if(request()->hasFile('image')){
-            $data['image'] = request()->file('image')->store('public/products');
+            $data['image'] = request()->file('image')->store('products');
         }
         if (request()->has('discount') && request()->discount > 0) {
             if(request()->has('sale_price')){
@@ -136,7 +136,7 @@ class ProductController extends Controller
             'discount'=>'numeric|nullable',
             'brand_id'=>'required|numeric',
             'category_id'=>'required|numeric',
-            'image'=>'nullable|'.v_image().'|dimensions:ratio=1/1',
+            'image'=>'nullable|'.v_image(),
             'new_price'=>'nullable',
             ],[],[
                 'name'=>trans('admincp.name'),
@@ -152,7 +152,7 @@ class ProductController extends Controller
                 'new_price'=>trans('admincp.p_after_d'),
             ]);
         if(request()->hasFile('image')){
-            $data['image'] = request()->file('image')->store('public/products');
+            $data['image'] = request()->file('image')->store('products');
         }
         if (request()->has('discount') && request()->discount > 0) {
             if(request()->has('sale_price')){
@@ -173,7 +173,7 @@ class ProductController extends Controller
         }          
         Product::findOrFail($id)->update($data);
         session()->flash('updated',trans('admincp.record_updated'));
-        return redirect(aurl('product')); 
+        return redirect(aurl('product/show/table')); 
 
     }
 

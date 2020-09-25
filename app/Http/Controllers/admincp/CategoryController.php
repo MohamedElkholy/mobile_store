@@ -51,7 +51,7 @@ class CategoryController extends Controller
             'image'=>trans('admincp.image'),
         ]);
         if(request()->hasFile('image')){
-            $data['image'] = request()->file('image')->store('public/categories');
+            $data['image'] = request()->file('image')->store('categories');
         }
         Category::create($data);
         session()->flash('added',trans('admincp.record_added'));
@@ -105,7 +105,7 @@ class CategoryController extends Controller
             'image'=>trans('admincp.image'),
         ]);
         if(request()->hasFile('image')){
-            $data['image'] = request()->file('image')->store('public/categories');
+            $data['image'] = request()->file('image')->store('categories');
         }
         Category::where('id', $id)->update($data);
         session()->flash('updated',trans('admincp.record_updated'));

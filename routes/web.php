@@ -10,14 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-	try{
-    $title = settings()->store_name ;
-    $store_name = settings()->store_name;
-	}catch(Exception $e){
-		$title = trans('title');
-		$store_name ="xampp". trans('admincp.open_appache');
-	}
-    return view('welcome',compact('title','store_name'));
-});
+Route::get('/', 'HomeController@welcome');
 

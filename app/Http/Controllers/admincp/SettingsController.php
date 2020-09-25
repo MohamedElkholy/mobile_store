@@ -39,11 +39,11 @@ class SettingsController extends Controller
         ]);
 
         if(request()->hasFile('logo')){
-            $data['logo'] = request()->file('logo')->store('public/settings');
+            $data['logo'] = request()->file('logo')->store('settings');
         }
 
         if(request()->hasFile('icon')){
-            $data['icon'] = request()->file('icon')->store('public/settings');
+            $data['icon'] = request()->file('icon')->store('settings');
         }
         $settings = Settings::orderBy('id','desc')->first(); 
         $settings->update($data);

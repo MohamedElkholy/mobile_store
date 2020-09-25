@@ -40,9 +40,7 @@ Route::group(['prefix'=>'admincp','namespace'=>'admincp'], function () {
         Route::resource('operation','OperationController');
         // Route::resource('service','ServiceController');
         
-        Route::get('/', function () {
-            return view('admincp.home',['title'=>trans('admincp.adminPanel')]);
-        });
+        Route::get('/','HomeController@home');
         Route::any('logout','AdminAuth@logout');
 
         Route::get('report','ReportController@index');
